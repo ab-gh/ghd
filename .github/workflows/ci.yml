@@ -9,4 +9,4 @@ jobs:
     - name: Run Django unit tests
       run: |
         export DB_PASSWORD=${{ secrets.DB_PASSWORD }}
-        docker-compose up
+        docker-compose up -d
