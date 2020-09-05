@@ -6,7 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Run Django unit tests
+    - name: Compose run Docker
       run: |
-        export DB_PASSWORD=${{ secrets.DB_PASSWORD }}
-        docker-compose up -d
+        export DB_PASSWORD=${{ secrets.DB_PASSWORD }} docker-compose run web

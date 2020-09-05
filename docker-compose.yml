@@ -14,5 +14,7 @@ services:
             - "8000:8000"
         environment:
             POSTGRES_PASSWORD: ${DB_PASSWORD}
+        depends_on: 
+            - db
 
 
