@@ -3,6 +3,8 @@ version: '3'
 services:
     db:
         image: postgres
+        environment:
+            POSTGRES_PASSWORD: ${DB_PASSWORD}
 
     web:
         build: .
@@ -10,3 +12,7 @@ services:
             - .:/usr/src/app
         ports:
             - "8000:8000"
+        environment:
+            POSTGRES_PASSWORD: ${DB_PASSWORD}
+
+

@@ -82,9 +82,9 @@ DATABASES = {
         'USER': 'postgres',
         'HOST': 'db',
         'PORT': 5432,
+        'PASSWORD': os.environ.get("POSTGRES_PASSWORD"),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
