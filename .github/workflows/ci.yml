@@ -8,4 +8,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Compose run Docker
       run: |
-        export DB_PASSWORD=${{ secrets.DB_PASSWORD }} docker-compose run web
+        export DB_PASSWORD=${{ secrets.DB_PASSWORD }} 
+        docker-compose run web
